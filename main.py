@@ -18,20 +18,21 @@ if __name__ == '__main__':
 	elif(arg == 'split'):
 		print('\nInput secret:')
 
-		# secret_str = input()
-		secret_str = "0x1b93527e"
-		# secret_int = int(secret_str, 16)
+		secret_str = input()
+		# secret_str = "0x3454078a54a22d0c97db7f294b376278"
+		secret_int = int(secret_str, 16)
 		secret_bytes = bytes.fromhex(secret_str[2:])
-		print('\nInput N T:')
+		print('\nInput N T (N >= T):')
 
-		# nt_strs = input().split()
-		nt_strs = "10 3"
+		nt_strs = input().split()
+		#nt_strs = "10 3"
 
-		n = nt_strs[0]
-		t = nt_strs[1]
+		n = int(nt_strs[0])
+		t = int(nt_strs[1])
 
-		exam = get_random_bytes(16)
-		shares = Shamir.split(2, 5, exam)
+		# exam = get_random_bytes(16)
+		shares = Shamir.split(t, n, secret_bytes)
 
+		print('\nSplitted secret:')
 		for idx, share in shares:
-			print("Index {}: {}".format(idx, share.hex()))
+			print("Part {}: {}".format(idx, share.hex()))

@@ -32,7 +32,7 @@ if __name__ == '__main__':
     elif(arg == 'recover'):
         shares = []
         fl = True
-        print('\nInput idx and share separated by ":" (or press enter to exit):')
+        print('\nInput idx and part of secret separated by ":" (or press enter to exit):')
         while fl:
             part_str = input()
             if len(part_str) != 0:

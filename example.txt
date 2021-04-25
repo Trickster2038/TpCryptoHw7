@@ -23,8 +23,9 @@ Part 5: 0x82408df7eb3b43cadda167668efd8550
 C:\Users\Trickster2038\Desktop\TpCryptoHw7>python main.py recover
 === WELCOME TO SHAMIR SPLITTER ===
 
-Input idx and share separated by ":" (or press enter to exit):
+Input idx and part of secret separated by ":" (or press enter to exit):
 1: 0x01b70999e53df86ad1be5bf94bd91c7d
 4: 0x62bd6cec68baed22dea6a8417fb4a379
 
+Recovered secret:
 0xe14ae88266bc5682d2b994deba903a54

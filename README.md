@@ -53,3 +53,8 @@ Input idx and part of secret separated by ":" (or press enter to exit):
 0xe14ae88266bc5682d2b994deba903a54
 ```
 *Можно видеть, что восстановленный ключ совпадает с исходным* 
+## Содержимое репозитория
+- main.py - основная программа
+- secretgen.py - модуль генерации 128-битного secret key
+- example.txt - пример работы программы в консоли
+- launch.png - скриншот работы программы в консоли

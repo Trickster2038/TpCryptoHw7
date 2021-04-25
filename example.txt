@@ -1,0 +1,37 @@
+C:\Users\Trickster2038\Desktop\TpCryptoHw7>python main.py generate
+=== WELCOME TO SHAMIR SPLITTER ===
+
+Generated key:
+0xe14ae88266bc5682d2b994deba903a54
+
+C:\Users\Trickster2038\Desktop\TpCryptoHw7>python main.py split
+=== WELCOME TO SHAMIR SPLITTER ===
+
+Input secret:
+0xe14ae88266bc5682d2b994deba903a54
+
+Input N T (N >= T):
+5 2
+
+Splitted secret:
+Part 1: 0x01b70999e53df86ad1be5bf94bd91c7d
+Part 2: 0x20b12ab561bf0b52d4b60a9158027681
+Part 3: 0xc04ccbaee23ea5bad7b1c5b6a94b50a8
+Part 4: 0x62bd6cec68baed22dea6a8417fb4a379
+Part 5: 0x82408df7eb3b43cadda167668efd8550
+
+C:\Users\Trickster2038\Desktop\TpCryptoHw7>python main.py recover
+=== WELCOME TO SHAMIR SPLITTER ===
+
+Input idx and share separated by ":" (or press enter to exit):
+1: 0x01b70999e53df86ad1be5bf94bd91c7d
+4: 0x62bd6cec68baed22dea6a8417fb4a379
+
+[[1, '01b70999e53df86ad1be5bf94bd91c7d'], [4, '62bd6cec68baed22dea6a8417fb4a379']]
+Part 1: 0x01b70999e53df86ad1be5bf94bd91c7d
+Part 4: 0x62bd6cec68baed22dea6a8417fb4a379
+Part 1: 0xb'\x01\xb7\t\x99\xe5=\xf8j\xd1\xbe[\xf9K\xd9\x1c}'
+Part 4: 0xb'b\xbdl\xech\xba\xed"\xde\xa6\xa8A\x7f\xb4\xa3y'
+Part 1: 0x01b70999e53df86ad1be5bf94bd91c7d
+Part 4: 0x62bd6cec68baed22dea6a8417fb4a379
+0xe14ae88266bc5682d2b994deba903a54

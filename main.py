@@ -37,23 +37,26 @@ if __name__ == '__main__':
             print("Part {}: 0x{}".format(idx, share.hex()))
 
     elif(arg == 'recover'):
-        shares = [[1, "2bae6ed5ba407223348226a4e1e58a42"],[2, "fa7b3591a728f18d870c2939bc3a2f91"]]
-        # shares = []
-        # fl = True
-        # print('\nInput idx and share separated by ":" (or press enter to exit):')
-        # while fl:
-        #     part_str = input()
-        #     if len(part_str) != 0:
-        #         idx, share = [ s.strip() for s in part_str.split(":") ]
-        #         #part_int = int(share, 16)
-        #         inner_share = share[2:]
-        #         part_bytes = binascii.unhexlify(inner_share)
-        #         shares.append((idx, part_bytes))
-        #     else:
-        #         fl = False
+        # shares = [[1, "2bae6ed5ba407223348226a4e1e58a42"],[2, "fa7b3591a728f18d870c2939bc3a2f91"]]
+        shares = []
+        fl = True
+        print('\nInput idx and share separated by ":" (or press enter to exit):')
+        while fl:
+            part_str = input()
+            if len(part_str) != 0:
+                idx, share = [ s.strip() for s in part_str.split(":") ]
+                #part_int = int(share, 16)
+                inner_share = share[2:]
+
+                part_bytes = inner_share
+                #part_bytes = binascii.unhexlify(inner_share)
+
+                shares.append([int(idx), part_bytes])
+            else:
+                fl = False
 
         #shares = [[1, "2bae6ed5ba407223348226a4e1e58a42"],[2, "fa7b3591a728f18d870c2939bc3a2f91"]]
-
+        print(shares)
         bin_shares = [] 
 
         for share in shares:
@@ -64,6 +67,9 @@ if __name__ == '__main__':
 
         for idx, share in bin_shares:
             print("Part {}: 0x{}".format(idx, share))
+
+        for idx, share in bin_shares:
+            print("Part {}: 0x{}".format(idx, share.hex()))
 
         key = Shamir.combine(bin_shares)
         print('0x{}'.format(key.hex()))
